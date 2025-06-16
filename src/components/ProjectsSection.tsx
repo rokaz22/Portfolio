@@ -1,5 +1,6 @@
 
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ProjectsSection = () => {
   const projects = [
@@ -111,6 +112,17 @@ const ProjectsSection = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Read More Button */}
+        <div className="text-center mt-12">
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#FECD1A] text-[#2D2E32] font-bold rounded-lg hover:bg-[#FFAF29] transition-all duration-300 hover:scale-105 text-lg"
+          >
+            View All Projects
+            <ArrowRight size={20} />
+          </Link>
         </div>
       </div>
     </section>
