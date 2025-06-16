@@ -1,12 +1,12 @@
 
-import { Github, Linkedin, Twitter, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail, Heart, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub', color: 'hover:text-white' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn', color: 'hover:text-blue-400' },
-    { icon: Twitter, href: '#', label: 'Twitter', color: 'hover:text-blue-400' },
-    { icon: Mail, href: 'mailto:mahmoud@dotfolio.dev', label: 'Email', color: 'hover:text-[#64F4AB]' },
+    { icon: Github, href: 'https://github.com/rokaz22', label: 'GitHub', color: 'hover:text-white' },
+    { icon: Instagram, href: 'https://www.instagram.com/al.shahin20/', label: 'GitHub', color: 'hover:text-white' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/mahmoud-shaheen-99179787/', label: 'LinkedIn', color: 'hover:text-blue-400' },
+    { icon: Mail, href: 'mailto:m.shaheen@dotwebagency.net', label: 'Email', color: 'hover:text-[#64F4AB]' },
   ];
 
   const quickLinks = [
@@ -32,6 +32,7 @@ const Footer = () => {
                 <a
                   key={social.label}
                   href={social.href}
+                   target="_blank"
                   className={`w-10 h-10 bg-[#2D2E32] rounded-lg flex items-center justify-center border border-[#64F4AB]/20 hover:border-[#64F4AB] transition-all duration-300 hover:scale-110 text-gray-400 ${social.color}`}
                   aria-label={social.label}
                 >
@@ -63,10 +64,10 @@ const Footer = () => {
             <div className="space-y-2 text-gray-400">
               <p>Ready to start your next project?</p>
               <a
-                href="mailto:mahmoud@dotfolio.dev"
+                href="mailto:mahmoud.shaheen@dotwebagency.net"
                 className="text-[#64F4AB] hover:text-[#FECD1A] transition-colors"
               >
-                mahmoud@dotfolio.dev
+                m.shaheen@dotwebagency.net 
               </a>
             </div>
             <div className="pt-4">

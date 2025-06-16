@@ -69,11 +69,11 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 font-light">
-            Full-stack Developer & UI/UX Craftsman
+            Front-End & Wordpress Developer
           </p>
           
           <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Building modern, scalable, and user-centric digital experiences
+            I don’t just design websites, I design experiences.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">

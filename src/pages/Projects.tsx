@@ -105,8 +105,7 @@ const Projects = () => {
                     href={project.codeUrl}
                     className="flex items-center gap-2 text-[#64F4AB] hover:text-[#FECD1A] transition-colors font-medium"
                   >
-                    <Github size={18} />
-                    View Code
+                 
                   </a>
                 </div>
               </div>
