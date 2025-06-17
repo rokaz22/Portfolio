@@ -29,8 +29,9 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+          
           <Link to="/" className="text-2xl font-bold text-[#64F4AB] hover:text-[#FECD1A] transition-colors">
-            Dotfolio
+            <img width="30%" src="../../public/images/logo.png" alt="logo"/>
           </Link>
 
           {/* Desktop Menu */}
