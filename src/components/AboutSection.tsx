@@ -78,17 +78,12 @@ const AboutSection = () => {
 
         {/* Timeline */}
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-[#64F4AB]/30"></div>
-          
-          <div className="space-y-12">
-            {timelineItems.map((item, index) => (
-              <div
-                key={index}
-                className={`flex items-center ${
-                  index % 2 === 0 ? 'justify-start' : 'justify-end'
-                }`}
-              >
-                <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
+           <div className="md:hidden">Add commentMore actions
+            <div className="space-y-8">
+              {timelineItems.map((item, index) => (
+                <div key={index} className="relative pl-8">
+                  <div className="absolute left-0 top-0 w-4 h-4 bg-[#64F4AB] rounded-full"></div>
+                  <div className="absolute left-2 top-4 w-px h-full bg-[#64F4AB]/30"></div>
                   <div className="bg-[#2D2E32] p-6 rounded-xl border border-[#64F4AB]/20 hover:border-[#64F4AB]/50 transition-colors">
                     <span className="text-[#FECD1A] font-bold text-lg">
                       {item.year}
@@ -102,9 +97,40 @@ const AboutSection = () => {
                   </div>
                 </div>
                 
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#64F4AB] rounded-full border-4 border-[#25262A]"></div>
-              </div>
-            ))}
+               ))}Add commentMore actions
+            </div>
+          </div>
+
+          {/* Desktop Timeline */}
+          <div className="hidden md:block">
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-[#64F4AB]/30"></div>
+            
+            <div className="space-y-12">
+              {timelineItems.map((item, index) => (
+                <div
+                  key={index}
+                  className={`flex items-center ${
+                    index % 2 === 0 ? 'justify-start' : 'justify-end'
+                  }`}
+                >
+                  <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
+                    <div className="bg-[#2D2E32] p-6 rounded-xl border border-[#64F4AB]/20 hover:border-[#64F4AB]/50 transition-colors">
+                      <span className="text-[#FECD1A] font-bold text-lg">
+                        {item.year}
+                      </span>
+                      <h4 className="text-white font-bold text-xl mb-2">
+                        {item.title}
+                      </h4>
+                      <p className="text-gray-400">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#64F4AB] rounded-full border-4 border-[#25262A]"></div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

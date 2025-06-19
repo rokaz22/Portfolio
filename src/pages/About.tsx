@@ -1,5 +1,6 @@
 
 import { Lightbulb, Shield, Target } from 'lucide-react';
+import { Calendar, MapPin, Coffee, Code } from 'lucide-react';
 
 const About = () => {
   const highlights = [
@@ -57,6 +58,55 @@ const About = () => {
           </p>
         </div>
 
+ {/* Hero Section */}
+      <section className="pt-24 pb-16">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                <span className="text-gradient">About Me</span>
+              </h1>
+              <p className="text-lg text-white/70 leading-relaxed mb-6">
+                I'm a passionate full-stack developer with over 5 years of experience creating 
+                digital experiences that matter. I believe in writing clean, efficient code and 
+                building applications that are not just functional, but delightful to use.
+              </p>
+              <p className="text-lg text-white/70 leading-relaxed mb-8">
+                When I'm not coding, you'll find me exploring new technologies, contributing to 
+                open source projects, or enjoying a good cup of coffee while sketching out the 
+                next big idea.
+              </p>
+              
+              <div className="flex flex-wrap gap-6 text-sm text-white/60">
+                <div className="flex items-center">
+                  <MapPin className="h-4 w-4 text-mint-green mr-2" />
+                  San Francisco, CA
+                </div>
+                <div className="flex items-center">
+                  <Calendar className="h-4 w-4 text-mint-green mr-2" />
+                  Available for Projects
+                </div>
+                <div className="flex items-center">
+                  <Coffee className="h-4 w-4 text-mint-green mr-2" />
+                  Coffee Enthusiast
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="glass-effect rounded-2xl p-8">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face"
+                  alt="Alex Johnson"
+                  className="w-full rounded-xl object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-mint-green/20 rounded-full blur-2xl"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
         {/* Highlights */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {highlights.map((highlight, index) => (
@@ -80,7 +130,31 @@ const About = () => {
         {/* Timeline */}
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-center text-white mb-16">My Journey</h2>
-          <div className="relative">
+           {/* Mobile Timeline */}Add commentMore actions
+          <div className="md:hidden">
+            <div className="space-y-8">
+              {timelineItems.map((item, index) => (
+                <div key={index} className="relative pl-8">
+                  <div className="absolute left-0 top-0 w-4 h-4 bg-[#64F4AB] rounded-full"></div>
+                  <div className="absolute left-2 top-4 w-px h-full bg-[#64F4AB]/30"></div>
+                  <div className="bg-[#25262A] p-6 rounded-xl border border-[#64F4AB]/20">
+                    <span className="text-[#FECD1A] font-bold text-xl">
+                      {item.year}
+                    </span>
+                    <h4 className="text-white font-bold text-2xl mb-3">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-400 text-lg">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop Timeline */}
+          <div className="hidden md:block relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-[#64F4AB]/30"></div>
             
             <div className="space-y-12">

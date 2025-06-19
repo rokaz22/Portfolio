@@ -1,5 +1,5 @@
 @tailwind base;
-@tailwind components;
+@tailwind components; /* Your custom components go here */
 @tailwind utilities;
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
@@ -89,6 +89,15 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer components { /* This is where the .glass-effect should go. */
+  .glass-effect {
+    background-color: rgba(255, 255, 255, 0.08); /* Slightly transparent white */
+    backdrop-filter: blur(10px); /* Blurs the background */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
   }
 }
 
