@@ -1,138 +1,128 @@
 
-import { ExternalLink, Github } from 'lucide-react';
+import { useState } from 'react';
+import ProjectCard from '@/components/ProjectCard';
 
-const Projects = () => {
+const Portfolio = () => {
+  const [activeFilter, setActiveFilter] = useState('All');
+
   const projects = [
     {
+      id: 1,
       title: 'LoopBazaar',
-      description: 'Amazon-style online marketplace with advanced filtering, payment integration, and vendor management system.',
-      tech: ['WordPress', 'WooCommerce', 'Custom Plugins', 'PHP'],
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-      liveUrl: '#',
-      codeUrl: '#',
+      description: 'Amazon-style online marketplace with advanced vendor management, payment integration, and sophisticated filtering system.',
+      image: 'photo-1556742049-0cfed4f6a45d',
+      techStack: ['WordPress', 'WooCommerce', 'Custom Plugins', 'PHP', 'MySQL'],
+      liveUrl: 'https://example.com',
+      githubUrl: 'https://github.com',
+      category: 'E-commerce'
     },
     {
+      id: 2,
       title: 'Tatroma',
-      description: 'Luxury furniture e-commerce site with 3D product visualization and custom configurator.',
-      tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS3'],
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop',
-      liveUrl: '#',
-      codeUrl: '#',
+      description: 'Luxury furniture e-commerce platform featuring 3D product visualization, custom configurator, and premium user experience.',
+      image: 'photo-1586023492125-27b2c045efd7',
+      techStack: ['Shopify', 'Liquid', 'JavaScript', 'CSS3', 'ThreeJS'],
+      liveUrl: 'https://example.com',
+      githubUrl: 'https://github.com',
+      category: 'E-commerce'
     },
     {
+      id: 3,
       title: 'ESAR',
-      description: "Saudi Arabia's leading peer-to-peer car rental platform with real-time booking and payment processing.",
-      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
-      image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop',
-      liveUrl: '#',
-      codeUrl: '#',
+      description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
+      image: 'photo-1449824913935-59a10b8d2000',
+      techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
+      liveUrl: 'https://example.com',
+      githubUrl: 'https://github.com',
+      category: 'Web App'
     },
     {
+      id: 4,
       title: 'Zamdkotch',
-      description: 'Arabic learning and courses platform with interactive lessons and progress tracking.',
-      tech: ['WordPress', 'Custom LMS', 'JavaScript', 'MySQL'],
-      image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=600&h=400&fit=crop',
-      liveUrl: '#',
-      codeUrl: '#',
+      description: 'Comprehensive Arabic learning platform with interactive lessons, progress tracking, and gamified learning experience.',
+      image: 'photo-1434030216411-0b793f4b4173',
+      techStack: ['WordPress', 'LearnDash', 'Custom Themes', 'Ajax', 'MySQL'],
+      liveUrl: 'https://example.com',
+      githubUrl: 'https://github.com',
+      category: 'E-learning'
     },
     {
+      id: 5,
       title: 'GlobalLink Trade Hub',
-      description: 'Business development, event booking & design hub with comprehensive management system.',
-      tech: ['WordPress', 'Elementor', 'MyCred', 'AffiliateWP'],
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-      liveUrl: '#',
-      codeUrl: '#',
-    },
+      description: 'Multi-purpose business platform for development, event booking, and design services with integrated CRM and analytics.',
+      image: 'photo-1507003211169-0a1dd7228f2d',
+      techStack: ['WordPress', 'Event Calendar', 'Booking System', 'CRM Integration'],
+      liveUrl: 'https://example.com',
+      githubUrl: 'https://github.com',
+      category: 'Business Platform'
+    }
   ];
 
+  const categories = ['All', 'E-commerce', 'Web App', 'E-learning', 'Business Platform'];
+
+  const filteredProjects = activeFilter === 'All' 
+    ? projects 
+    : projects.filter(project => project.category === activeFilter);
+
   return (
-    <div className="min-h-screen bg-[#2D2E32] text-white pt-20">
-      <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Projects I've{' '}
-            <span className="text-[#64F4AB]">Brought to Life</span>
+    <div className="min-h-screen bg-dark-primary">
+      
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 dark-section">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <span className="text-gradient">My Portfolio</span>
           </h1>
-          <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
-            From concept to deployment, here are some of the digital experiences I've crafted. 
-            Each project represents a unique challenge solved with modern technologies and innovative approaches.
+          <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+            A showcase of real-world projects that demonstrate expertise in creating modern, 
+            scalable, and user-focused digital solutions. Each project tells a unique story 
+            of innovation and problem-solving.
           </p>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group relative bg-[#25262A] rounded-xl overflow-hidden border border-[#64F4AB]/20 hover:border-[#64F4AB]/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#64F4AB]/10"
-            >
-              <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#25262A] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#64F4AB] transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 bg-[#FECD1A]/20 text-[#FECD1A] text-sm rounded-full border border-[#FECD1A]/30 font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="flex gap-4">
-                  <a
-                    href={project.liveUrl}
-                    className="flex items-center gap-2 text-[#64F4AB] hover:text-[#FECD1A] transition-colors font-medium"
-                  >
-                    <ExternalLink size={18} />
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.codeUrl}
-                    className="flex items-center gap-2 text-[#64F4AB] hover:text-[#FECD1A] transition-colors font-medium"
-                  >
-                 
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-20">
-          <div className="bg-[#25262A] p-12 rounded-2xl border border-[#64F4AB]/20">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Start Your Project?
-            </h2>
-            <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
-              Let's collaborate to bring your vision to life with modern technologies and exceptional design.
-            </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-[#FECD1A] text-[#2D2E32] font-bold rounded-lg hover:bg-[#FFAF29] transition-all duration-300 hover:scale-105 text-lg"
-            >
-              Get In Touch
-            </a>
+      {/* Filter Section */}
+      <section className="pb-12 bg-dark-primary">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category}
+              onClick={() => setActiveFilter(category)}
+        className={`px-6 py-3 rounded-full transition-all duration-300 font-medium ${
+          activeFilter === category
+            ? 'bg-[#FECD1A] text-[#2D2E32] shadow-lg scale-105' // Active button
+            : 'glass-effect text-white hover:text-[#FECD1A] hover:scale-105' // Inactive button
+        }`}
+              >
+                {category}
+              </button>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Projects Grid */}
+      <section className="pb-20 bg-dark-primary">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((project) => (
+              <div key={project.id} className="animate-fade-in">
+                <ProjectCard project={project} />
+              </div>
+            ))}
+          </div>
+          
+          {filteredProjects.length === 0 && (
+            <div className="text-center py-20">
+              <p className="text-white/60 text-lg">No projects found in this category.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
     </div>
   );
 };
 
-export default Projects;
+export default Portfolio;

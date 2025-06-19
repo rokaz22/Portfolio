@@ -2,6 +2,19 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+const scrollToProjects = (e: React.MouseEvent) => {
+    e.preventDefault(); // Stop the default anchor link behavior
+    e.stopPropagation(); // Prevent the click from bubbling further up if not desired
+
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
 const HeroSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -25,8 +38,8 @@ const HeroSection = () => {
             key={i}
             className="absolute w-1 h-1 bg-[#64F4AB] rounded-full opacity-20 animate-pulse"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 80}%`,
+              top: `${Math.random() * 80}%`,
               animationDelay: `${Math.random() * 2}s`,
               animationDuration: `${2 + Math.random() * 2}s`,
             }}
@@ -62,7 +75,8 @@ const HeroSection = () => {
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         <div className="space-y-8 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-[#64F4AB] to-white bg-clip-text text-transparent leading-tight">
-            Hi, I'm{' '}
+            Hi, I'm <br></br>{' '}
+
             <span className="text-[#FECD1A] drop-shadow-lg">
               Mahmoud Shaheen
             </span>
@@ -73,16 +87,17 @@ const HeroSection = () => {
           </p>
           
           <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            I don’t just design websites, I design experiences.
+            Transforming concepts into intuitive digital realities.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
             <a
               href="#projects"
-              className="group relative px-8 py-4 bg-[#FECD1A] text-[#2D2E32] font-semibold rounded-full transition-all duration-300 hover:bg-[#FFAF29] hover:scale-105 hover:shadow-xl hover:shadow-[#FECD1A]/30"
+              className="group relative px-8 py-4 bg-[#FECD1A] text-[#2D2E32] font-semibold rounded-full transition-all duration-300 hover:bg-[#FFAF29] hover:scale-105 hover:shadow-xl hover:shadow-[#FECD1A]/10"
+            onClick={scrollToProjects}
             >
               View My Work
-              <span className="absolute -top-1 -right-1 w-3 h-3 bg-[#64F4AB] rounded-full animate-ping"></span>
+              <span className="absolute  top-[250px] -right-5 w-3 h-3 bg-[#64F4AB] rounded-full animate-ping"></span>
             </a>
             
             <Link
@@ -91,6 +106,7 @@ const HeroSection = () => {
             >
               Contact Me
             </Link>
+            
           </div>
         </div>
       </div>
