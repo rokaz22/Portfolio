@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -60,7 +60,7 @@ const Contact = () => {
   const socialLinks = [
     { icon: Github, href: '#', label: 'GitHub' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Instagram, href: '#', label: 'Instagram' },
   ];
 
   return (
@@ -203,12 +203,12 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="p-6 bg-gradient-to-br from-[#64F4AB]/10 to-[#FECD1A]/10 rounded-xl border border-[#64F4AB]/20">
+            {/* <div className="p-6 bg-gradient-to-br from-[#64F4AB]/10 to-[#FECD1A]/10 rounded-xl border border-[#64F4AB]/20">
               <h3 className="text-xl font-bold text-white mb-3">Ready to Start?</h3>
               <p className="text-gray-400 leading-relaxed">
                 I'm always excited to work on new projects and collaborate with amazing people. Let's discuss your ideas and create something extraordinary together!
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
