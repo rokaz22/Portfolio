@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
@@ -20,20 +19,54 @@ const Contact = () => {
     });
   };
 
+  // Helper function to encode data for x-www-form-urlencoded
+  const encode = (data: { [key: string]: string }) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch("/", { // Submit to the current page path, Netlify will intercept
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        // IMPORTANT: "form-name" must match the 'name' attribute of your Netlify form
+        // (which is "contact" in the hidden HTML form and will be added below)
+        body: encode({ "form-name": "contact", ...formData }),
+      });
 
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setIsSubmitting(false);
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for reaching out. I'll get back to you soon!",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        // You might want to log the response for debugging if it's not OK
+        console.error("Form submission failed:", response.status, response.statusText);
+        // Attempt to read error message if Netlify sends one (though it's rare for basic failures)
+        const errorText = await response.text();
+        console.error("Netlify response text:", errorText);
+        toast({
+          title: "Submission Failed!",
+          description: "There was an error sending your message. Please try again later.",
+          variant: "destructive" // Assuming you have a destructive variant for your toast
+        });
+      }
+    } catch (error) {
+      console.error("Network or submission error:", error);
+      toast({
+        title: "Network Error!",
+        description: "Could not connect to the server. Please check your internet connection.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -46,7 +79,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
+      value: '+1 (555) 123-4567', // Remember to update this to your actual phone number, Mahmoud!
       href: 'tel:+15551234567',
     },
     {
@@ -81,7 +114,17 @@ const Contact = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">Send a Message</h2>
-              <form netlify onSubmit={handleSubmit} className="space-y-6">
+              <form
+                name="contact" // Add this name attribute
+                method="POST" // Crucial for Netlify to recognize it as a form for submission
+                data-netlify="true" // Preferred for dynamic forms
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
+                {/* Optional: Netlify Honeypot for spam prevention (add to public/index.html too) */}
+                {/* <input type="hidden" name="bot-field" /> */}
+                <input type="hidden" name="form-name" value="contact" /> {/* Ensure this is here */}
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="relative">
                     <input
@@ -162,7 +205,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Information */}
+          {/* Contact Information (rest of your component) */}
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
@@ -202,13 +245,6 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-
-            {/* <div className="p-6 bg-gradient-to-br from-[#64F4AB]/10 to-[#FECD1A]/10 rounded-xl border border-[#64F4AB]/20">
-              <h3 className="text-xl font-bold text-white mb-3">Ready to Start?</h3>
-              <p className="text-gray-400 leading-relaxed">
-                I'm always excited to work on new projects and collaborate with amazing people. Let's discuss your ideas and create something extraordinary together!
-              </p>
-            </div> */}
           </div>
         </div>
       </div>
