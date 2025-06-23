@@ -5,44 +5,44 @@ import { useLocation } from 'react-router-dom';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'LoopBazaar',
-      description: 'Amazon-style online marketplace with advanced filtering, payment integration, and vendor management system.',
+      title: 'GlOBALLINK TRADE HUB',
+      description: 'event booking, payment integration, and design services with integrated CRM and analytics.',
       tech: ['WordPress', 'WooCommerce', 'Custom Plugins', 'PHP'],
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
+     image: '/images/Globallink.png',
       liveUrl: '#',
-      codeUrl: '#',
+      // codeUrl: '#',
     },
     {
-      title: 'Tatroma',
+      title: 'TATROMA',
       description: 'Luxury furniture e-commerce site with 3D product visualization and custom configurator.',
       tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS3'],
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop',
+      image: '/images/tatroma.png',
       liveUrl: '#',
-      codeUrl: '#',
+      // codeUrl: '#',
     },
     {
-      title: 'ESAR',
-      description: "Saudi Arabia's leading peer-to-peer car rental platform with real-time booking and payment processing.",
+      title: 'LUMEN LANDSCAPING',
+      description: "Clearly outline all their services. Each service could have its own dedicated page with descriptions, benefits, and relevant portfolio images.",
       tech: ['React', 'Node.js', 'MongoDB', 'Express'],
-      image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop',
+      image: '/images/lumen landescape.png',
       liveUrl: '#',
-      codeUrl: '#',
+      // codeUrl: '#',
     },
     {
-      title: 'Zamdkotch',
+      title: 'Zmedcoach',
       description: 'Arabic learning and courses platform with interactive lessons and progress tracking.',
       tech: ['WordPress', 'Custom LMS', 'JavaScript', 'MySQL'],
-      image: 'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=600&h=400&fit=crop',
+      image: '/images/zmedCoach.png',
       liveUrl: '#',
-      codeUrl: '#',
+      // codeUrl: '#',
     },
     {
       title: 'GlobalLink Trade Hub',
       description: 'Business development, event booking & design hub with comprehensive management system.',
       tech: ['WordPress', 'Elementor', 'MyCred', 'AffiliateWP'],
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-      liveUrl: '#',
-      codeUrl: '#',
+      image: '/images/arabs in neuro.png',
+      liveUrl: 'https://arabsinneuro.org/',
+      codeUrl: 'https://github.com/arabsinneuro/arabs-in-neuro/',
     },
   ];
 
@@ -94,20 +94,22 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <a
+                 
+                  <a target="_blank"
                     href={project.liveUrl}
                     className="flex items-center gap-2 text-[#64F4AB] hover:text-[#FECD1A] transition-colors text-sm"
                   >
                     <ExternalLink size={16} />
                     Live Demo
                   </a>
-                  <a
+                  {project.codeUrl && (  <a target="_blank"
                     href={project.codeUrl}
                     className="flex items-center gap-2 text-[#64F4AB] hover:text-[#FECD1A] transition-colors text-sm"
                   >
                     <Github size={16} />
                     View Code
-                  </a>
+                  </a>)}
+                
                 </div>
               </div>
             </div>

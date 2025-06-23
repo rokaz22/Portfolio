@@ -25,7 +25,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       <div className="relative overflow-hidden">
         <img
           // Image source remains the same
-          src={`https://images.unsplash.com/${project.image}`}
+          src={`/images/${project.image}`}
           alt={project.title}
           className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
         />
@@ -67,15 +67,15 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             Live Demo
           </a>
           {/* View Code button styling from ProjectsSection */}
-          <a
+          {project.githubUrl && ( <a
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-[#64F4AB] hover:text-[#FECD1A] transition-colors text-sm" // Changed from Button to anchor with specific styling
-          >
-            <Github size={16} /> {/* Changed icon size to 16 for consistency */}
-            View Code
-          </a>
+            className="flex items-center gap-2 text-[#64F4AB] hover:text-[#FECD1A] transition-colors text-sm"// Changed from Button to anchor with specific styling
+          > View Code
+            <Github size={16} /> {/* Changed icon size to 16 for consistency*/}
+           </a>  )}
+         
         </div>
       </div>
     </div>

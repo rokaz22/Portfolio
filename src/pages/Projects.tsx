@@ -8,57 +8,104 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: 'LoopBazaar',
-      description: 'Amazon-style online marketplace with advanced vendor management, payment integration, and sophisticated filtering system.',
-      image: 'photo-1556742049-0cfed4f6a45d',
-      techStack: ['WordPress', 'WooCommerce', 'Custom Plugins', 'PHP', 'MySQL'],
+      title: 'GLOBALLINK TRADE HUB',
+      description: 'event booking, payment integration, and design services with integrated CRM and analytics.',
+     image: 'Globallink.png',
+
+      techStack: ['WordPress', 'Event Calendar', 'Booking System', 'CRM Integration'],
       liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      // githubUrl: 'https://github.com',
       category: 'E-commerce'
     },
     {
       id: 2,
-      title: 'Tatroma',
+      title: 'TATROMA',
       description: 'Luxury furniture e-commerce platform featuring 3D product visualization, custom configurator, and premium user experience.',
-      image: 'photo-1586023492125-27b2c045efd7',
+      image: 'tatroma.png',
       techStack: ['Shopify', 'Liquid', 'JavaScript', 'CSS3', 'ThreeJS'],
       liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
-      category: 'E-commerce'
-    },
-    {
+           // githubUrl: 'https://github.com',
+
+      category: 'Woocommerce'
+    },{
       id: 3,
-      title: 'ESAR',
+      title: 'LUMEN LANDSCAPING',
+      description: 'Clearly outline all their services. Each service could have its own dedicated page with descriptions, benefits, and relevant portfolio images.',
+      image: 'lumen landescape.png',
+      techStack: ['WordPress', 'WooCommerce', 'Custom Plugins', 'PHP', 'MySQL'],
+      liveUrl: 'https://example.com',
+            // githubUrl: 'https://github.com',
+
+      category: 'Business Platform'
+    },
+   
+   
+    {
+      id: 4,
+      title: 'JAFCA',
+      description: 'Multi-purpose business platform for development, amazon-style online marketplace with advanced vendor management, and payment integration.',
+      image: 'jafca.png',
+      techStack: ['WordPress', 'Event Calendar', 'Booking System', 'CRM Integration'],
+      liveUrl: 'https://example.com',
+            // githubUrl: 'https://github.com',
+
+      category: 'Business Platform'
+    }, {
+      id: 5,
+      title: 'zmedCoach',
+      description: 'Comprehensive Arabic learning platform with interactive lessons, progress tracking, and gamified learning experience.',
+      image: 'zmedCoach.png',
+      techStack: ['WordPress', 'LearnDash', 'Custom Themes', 'Ajax', 'MySQL'],
+      liveUrl: 'https://example.com',
+        // githubUrl: 'https://github.com',
+
+      category: 'E-learning'
+    }, 
+    
+    {
+      id: 6,
+      title: 'ESARCAR',
       description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
-      image: 'photo-1449824913935-59a10b8d2000',
+      image: 'esarCar.png',
       techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
       liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+           // githubUrl: 'https://github.com',
+
+      category: 'Web App'
+    },
+     {
+      id: 7,
+      title: 'GLOBE TRADE COSMETICS STORE',
+      description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
+      image: 'Globe trade.png',
+      techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
+      liveUrl: 'https://example.com',
+           // githubUrl: 'https://github.com',
+
+      category: 'Web App'
+    },{
+      id: 8,
+      title: 'NASTARAN',
+      description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
+      image: 'nastaran.png',
+      techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
+      liveUrl: 'https://example.com',
+           // githubUrl: 'https://github.com',
+
       category: 'Web App'
     },
     {
-      id: 4,
-      title: 'Zamdkotch',
-      description: 'Comprehensive Arabic learning platform with interactive lessons, progress tracking, and gamified learning experience.',
-      image: 'photo-1434030216411-0b793f4b4173',
-      techStack: ['WordPress', 'LearnDash', 'Custom Themes', 'Ajax', 'MySQL'],
+      id: 9,
+      title: 'ARABS IN NEURO',
+      description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
+      image: 'arabs in neuro.png',
+      techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
       liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
-      category: 'E-learning'
-    },
-    {
-      id: 5,
-      title: 'GlobalLink Trade Hub',
-      description: 'Multi-purpose business platform for development, event booking, and design services with integrated CRM and analytics.',
-      image: 'photo-1507003211169-0a1dd7228f2d',
-      techStack: ['WordPress', 'Event Calendar', 'Booking System', 'CRM Integration'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
-      category: 'Business Platform'
+           githubUrl: 'https://github.com',
     }
   ];
 
-  const categories = ['All', 'E-commerce', 'Web App', 'E-learning', 'Business Platform'];
+  const categories = ['All', 'Woocommerce', 'Portfolio', 'E-learning', 'Business Platform'];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 
