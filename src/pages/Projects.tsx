@@ -67,7 +67,7 @@ const Portfolio = () => {
       title: 'ESARCAR',
       description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
       image: 'esarCar.png',
-      techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
+      techStack: ['React', 'Node.js',  'Google Maps API', 'Stripe'],
       liveUrl: 'https://esarcar.dotwebagency.net/',
            // githubUrl: 'https://github.com',
 
@@ -78,7 +78,7 @@ const Portfolio = () => {
       title: 'GLOBE TRADE COSMETICS STORE',
       description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
       image: 'Globe trade.png',
-      techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
+      techStack: ['React', 'Node.js', 'Google Maps API', 'Stripe'],
       liveUrl: 'https://glob-trade.com/',
            // githubUrl: 'https://github.com',
 
@@ -88,7 +88,7 @@ const Portfolio = () => {
       title: 'NAS CREATIONS',
       description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
       image: 'nastaran.png',
-      techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
+      techStack: ['React', 'Node.js', 'Google Maps API', 'Stripe'],
       liveUrl: 'https://nascreations.ca/',
            // githubUrl: 'https://github.com',
 
@@ -99,16 +99,16 @@ const Portfolio = () => {
       title: 'ARABS IN NEURO',
       description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
       image: 'arabs in neuro.png',
-      techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
-      liveUrl: 'https://github.com/arabsinneuro/arabs-in-neuro/',
-           githubUrl: 'https://arabsinneuro.org/',
+      techStack: ['React', 'Node.js', 'Google Maps API', 'Stripe'],
+      liveUrl: 'https://arabsinneuro.org/',
+           githubUrl: 'https://github.com/arabsinneuro/arabs-in-neuro/',
     },
     {
       id: 10,
       title: 'ariyan Art',
       description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
       image: 'ariyan Art.png',
-      techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
+      techStack: ['React', 'Node.js', 'Google Maps API', 'Stripe'],
       liveUrl: 'https://ariyanarts.ca/',
           //  githubUrl: '',
     }

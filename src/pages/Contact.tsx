@@ -79,21 +79,21 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567', // Remember to update this to your actual phone number, Mahmoud!
-      href: 'tel:+15551234567',
+      value: '+1 (647) 647-5375',
+      href: 'tel:+16472785375',
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Available Worldwide',
+      value: 'Markham, ON',
       href: '#',
     },
   ];
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: Github, href: 'https://github.com/rokaz22', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/mahmoud-shaheen-99179787/', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://www.instagram.com/reel/DLQHoAGCQWG/?utm_source=ig_web_copy_link', label: 'Instagram' },
   ];
 
   return (
@@ -234,10 +234,10 @@ const Contact = () => {
               <h3 className="text-xl font-bold text-white mb-4">Follow Me</h3>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
-                  <a
+                  <a target='_blank'
                     key={index}
                     href={social.href}
-                    className="w-12 h-12 bg-[#25262A] rounded-lg flex items-center justify-center border border-[#64F4AB]/20 hover:border-[#64F4AB] hover:bg-[#64F4AB]/10 transition-all duration-300 hover:scale-110 group"
+                    className="w-12 h-12  bg-[#25262A] rounded-lg flex items-center justify-center border border-[#64F4AB]/20 hover:border-[#64F4AB] hover:bg-[#64F4AB]/10 transition-all duration-300 hover:scale-110 group"
                     aria-label={social.label}
                   >
                     <social.icon className="w-6 h-6 text-[#64F4AB] group-hover:text-white transition-colors" />

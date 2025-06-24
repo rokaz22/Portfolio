@@ -5,18 +5,17 @@ const TechStackSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
   const technologies = [
-    { name: 'React', icon: '⚛️', color: '#61DAFB' },
+    { name: 'React.js', icon: '⚛️', color: '#61DAFB' },
     { name: 'WordPress', icon: '📝', color: '#21759B' },
     { name: 'Shopify', icon: '🛍️', color: '#96BF48' },
     { name: 'Tailwind CSS', icon: '🎨', color: '#06B6D4' },
-    { name: 'Node.js', icon: '🟢', color: '#339933' },
     { name: 'JavaScript', icon: '⚡', color: '#F7DF1E' },
     { name: 'PHP', icon: '🐘', color: '#777BB4' },
+    { name: 'Canva', icon: '🎨', color: '#F05032' },
+
     { name: 'Figma', icon: '🎯', color: '#F24E1E' },
-    { name: 'MongoDB', icon: '🍃', color: '#47A248' },
     { name: 'MySQL', icon: '🗄️', color: '#4479A1' },
-    { name: 'Git', icon: '📋', color: '#F05032' },
-    { name: 'Docker', icon: '🐳', color: '#2496ED' },
+    { name: 'Tailwind CSS', icon: '🎨', color: '#06B6D4' },
   ];
 
   useEffect(() => {

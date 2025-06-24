@@ -23,7 +23,7 @@ const ProjectsSection = () => {
     {
       title: 'LUMEN LANDSCAPING',
       description: "Clearly outline all their services. Each service could have its own dedicated page with descriptions, benefits, and relevant portfolio images.",
-      tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+      tech: ['React', 'Node.js',  'Express'],
       image: '/images/lumen landescape.png',
       liveUrl: 'https://lumenlandscaping.ca/',
       // codeUrl: '#',

@@ -21,27 +21,32 @@ const AboutSection = () => {
   ];
 
   const timelineItems = [
-    {
-      year: '2020',
-      title: 'Started as Volunteer',
-      description: 'Began web development journey with community projects',
-    },
-    {
-      year: '2021',
-      title: 'Joined GlobalLink',
-      description: 'Professional role developing business platforms',
-    },
-    {
-      year: '2022',
-      title: 'Zamdkotch Platform',
-      description: 'Led development of Arabic learning platform',
-    },
-    {
-      year: '2023',
-      title: 'ESAR Success',
-      description: 'Launched Saudi Arabia\'s leading car rental platform',
-    },
-  ];
+  {
+    year: '2024 - Present',
+    title: 'WordPress Developer',
+    description: 'Spearheaded website enhancement and maintenance, focusing on multi-vendor platforms and interactive features for GlobalLink Trade Hub Inc. ',
+  },
+  {
+    year: '2024',
+    title: 'Volunteer',
+    description: 'Began as a volunteer at GlobalLink Trade Hub Inc., working on website enhancement and maintenance ',
+  },
+  {
+    year: '2023 - 2024',
+    title: 'Web Designer & Developer',
+    description: 'Designed and implemented WooCommerce solutions for Zmedcoach, maintaining 99.9% uptime ',
+  },
+  {
+    year: '2022 - 2024',
+    title: 'Freelancer WordPress Developer',
+    description: 'Developed responsive websites using WordPress, Shopify, and Webflow, enhancing performance through SEO ',
+  },
+  {
+    year: '2020 - 2022',
+    title: 'Digital Marketing Specialist',
+    description: 'Managed social media campaigns for Snaptiks, increasing engagement by 40% ',
+  },
+]
 
   return (
     <section id="about" className="py-20 px-6 bg-[#25262A]">
@@ -138,7 +143,7 @@ const AboutSection = () => {
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Core Technologies</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {['React', 'WordPress', 'Shopify', 'Node.js', 'PHP', 'JavaScript', 'Tailwind CSS', 'WooCommerce', 'Liquid', 'MongoDB'].map((skill) => (
+            {['React.js', 'WordPress', 'Shopify', 'PHP', 'JavaScript', 'Tailwind CSS', 'WooCommerce', 'Canva','WooCommerce ','Elementor & Classic Editor '].map((skill) => (
               <span
                 key={skill}
                 className="px-6 py-3 bg-[#2D2E32] text-[#64F4AB] rounded-full border border-[#64F4AB]/30 hover:border-[#64F4AB] hover:bg-[#64F4AB]/10 transition-all duration-300"

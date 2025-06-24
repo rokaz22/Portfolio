@@ -22,28 +22,32 @@ const About = () => {
   ];
 
   const timelineItems = [
-    {
-      year: '2020',
-      title: 'Started as Volunteer',
-      description: 'Began web development journey with community projects',
-    },
-    {
-      year: '2021',
-      title: 'Joined GlobalLink',
-      description: 'Professional role developing business platforms',
-    },
-    {
-      year: '2022',
-      title: 'Zamdkotch Platform',
-      description: 'Led development of Arabic learning platform',
-    },
-    {
-      year: '2023',
-      title: 'ESAR Success',
-      description: 'Launched Saudi Arabia\'s leading car rental platform',
-    },
-  ];
-
+  {
+    year: '2024 - Present',
+    title: 'WordPress Developer (GlobalLink Trade Hub Inc.)',
+    description: 'Spearheaded website enhancement and maintenance, focusing on multi-vendor platforms and interactive features.',
+  },
+  {
+    year: '2024',
+    title: 'Volunteer (GlobalLink Trade Hub Inc.)',
+    description: 'Began as a volunteer, working on website enhancement and maintenance.',
+  },
+  {
+    year: '2023 - 2024',
+    title: 'Web Designer & Developer (Zmedcoach)',
+    description: 'Designed and implemented WooCommerce solutions for an online course platform, maintaining 99.9% uptime.',
+  },
+  {
+    year: '2022 - 2024',
+    title: 'Freelancer WordPress Developer',
+    description: 'Developed responsive websites using WordPress, Shopify, and Webflow, enhancing performance through SEO.',
+  },
+  {
+    year: '2020 - 2022',
+    title: 'Digital Marketing Specialist (Snaptiks)',
+    description: 'Managed social media campaigns, increasing engagement by 40%.',
+  },
+];
   return (
     <div className="min-h-screen bg-[#2D2E32] text-white pt-20">
       <div className="max-w-7xl mx-auto px-6 py-20">
@@ -160,7 +164,7 @@ const About = () => {
                       <span className="text-[#FECD1A] font-bold text-xl">
                         {item.year}
                       </span>
-                      <h4 className="text-white font-bold text-2xl mb-3">
+                      <h4 className="text-white font-bold  mb-3">
                         {item.title}
                       </h4>
                       <p className="text-gray-400 text-lg">
@@ -180,7 +184,7 @@ const About = () => {
         <div className="text-center">
           <h3 className="text-3xl font-bold text-white mb-12">Core Technologies</h3>
           <div className="flex flex-wrap justify-center gap-6">
-            {['React', 'WordPress', 'Shopify', 'PHP', 'JavaScript', 'Tailwind CSS', 'WooCommerce', 'Liquid', 'MongoDB'].map((skill) => (
+            {['React', 'WordPress', 'Shopify', 'PHP', 'JavaScript', 'Tailwind CSS', 'WooCommerce'].map((skill) => (
               <span
                 key={skill}
                 className="px-8 py-4 bg-[#25262A] text-[#64F4AB] rounded-full border border-[#64F4AB]/30 hover:border-[#64F4AB] hover:bg-[#64F4AB]/10 transition-all duration-300 text-lg font-semibold"
