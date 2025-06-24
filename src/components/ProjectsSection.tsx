@@ -9,7 +9,7 @@ const ProjectsSection = () => {
       description: 'event booking, payment integration, and design services with integrated CRM and analytics.',
       tech: ['WordPress', 'WooCommerce', 'Custom Plugins', 'PHP'],
      image: '/images/Globallink.png',
-      liveUrl: '#',
+      liveUrl: 'https://globallinktradehub.com/',
       // codeUrl: '#',
     },
     {
@@ -17,7 +17,7 @@ const ProjectsSection = () => {
       description: 'Luxury furniture e-commerce site with 3D product visualization and custom configurator.',
       tech: ['Shopify', 'Liquid', 'JavaScript', 'CSS3'],
       image: '/images/tatroma.png',
-      liveUrl: '#',
+      liveUrl: 'https://tatroma.ca/',
       // codeUrl: '#',
     },
     {
@@ -25,7 +25,7 @@ const ProjectsSection = () => {
       description: "Clearly outline all their services. Each service could have its own dedicated page with descriptions, benefits, and relevant portfolio images.",
       tech: ['React', 'Node.js', 'MongoDB', 'Express'],
       image: '/images/lumen landescape.png',
-      liveUrl: '#',
+      liveUrl: 'https://lumenlandscaping.ca/',
       // codeUrl: '#',
     },
     {
@@ -33,11 +33,11 @@ const ProjectsSection = () => {
       description: 'Arabic learning and courses platform with interactive lessons and progress tracking.',
       tech: ['WordPress', 'Custom LMS', 'JavaScript', 'MySQL'],
       image: '/images/zmedCoach.png',
-      liveUrl: '#',
+      liveUrl: 'https://zmedcoach.com/',
       // codeUrl: '#',
     },
     {
-      title: 'GlobalLink Trade Hub',
+      title: 'arabs in neuro',
       description: 'Business development, event booking & design hub with comprehensive management system.',
       tech: ['WordPress', 'Elementor', 'MyCred', 'AffiliateWP'],
       image: '/images/arabs in neuro.png',

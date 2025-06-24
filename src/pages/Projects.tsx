@@ -13,7 +13,7 @@ const Portfolio = () => {
      image: 'Globallink.png',
 
       techStack: ['WordPress', 'Event Calendar', 'Booking System', 'CRM Integration'],
-      liveUrl: 'https://example.com',
+      liveUrl: 'https://globallinktradehub.com/',
       // githubUrl: 'https://github.com',
       category: 'E-commerce'
     },
@@ -23,7 +23,7 @@ const Portfolio = () => {
       description: 'Luxury furniture e-commerce platform featuring 3D product visualization, custom configurator, and premium user experience.',
       image: 'tatroma.png',
       techStack: ['Shopify', 'Liquid', 'JavaScript', 'CSS3', 'ThreeJS'],
-      liveUrl: 'https://example.com',
+      liveUrl: 'https://tatroma.ca/',
            // githubUrl: 'https://github.com',
 
       category: 'Woocommerce'
@@ -33,7 +33,7 @@ const Portfolio = () => {
       description: 'Clearly outline all their services. Each service could have its own dedicated page with descriptions, benefits, and relevant portfolio images.',
       image: 'lumen landescape.png',
       techStack: ['WordPress', 'WooCommerce', 'Custom Plugins', 'PHP', 'MySQL'],
-      liveUrl: 'https://example.com',
+      liveUrl: 'https://lumenlandscaping.ca/',
             // githubUrl: 'https://github.com',
 
       category: 'Business Platform'
@@ -46,7 +46,7 @@ const Portfolio = () => {
       description: 'Multi-purpose business platform for development, amazon-style online marketplace with advanced vendor management, and payment integration.',
       image: 'jafca.png',
       techStack: ['WordPress', 'Event Calendar', 'Booking System', 'CRM Integration'],
-      liveUrl: 'https://example.com',
+      liveUrl: 'https://jafca.ca/',
             // githubUrl: 'https://github.com',
 
       category: 'Business Platform'
@@ -56,7 +56,7 @@ const Portfolio = () => {
       description: 'Comprehensive Arabic learning platform with interactive lessons, progress tracking, and gamified learning experience.',
       image: 'zmedCoach.png',
       techStack: ['WordPress', 'LearnDash', 'Custom Themes', 'Ajax', 'MySQL'],
-      liveUrl: 'https://example.com',
+      liveUrl: 'https://zmedcoach.com/',
         // githubUrl: 'https://github.com',
 
       category: 'E-learning'
@@ -68,7 +68,7 @@ const Portfolio = () => {
       description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
       image: 'esarCar.png',
       techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
-      liveUrl: 'https://example.com',
+      liveUrl: 'https://esarcar.dotwebagency.net/',
            // githubUrl: 'https://github.com',
 
       category: 'Web App'
@@ -79,17 +79,17 @@ const Portfolio = () => {
       description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
       image: 'Globe trade.png',
       techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
-      liveUrl: 'https://example.com',
+      liveUrl: 'https://glob-trade.com/',
            // githubUrl: 'https://github.com',
 
       category: 'Web App'
     },{
       id: 8,
-      title: 'NASTARAN',
+      title: 'NAS CREATIONS',
       description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
       image: 'nastaran.png',
       techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
-      liveUrl: 'https://example.com',
+      liveUrl: 'https://nascreations.ca/',
            // githubUrl: 'https://github.com',
 
       category: 'Web App'
@@ -100,8 +100,17 @@ const Portfolio = () => {
       description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
       image: 'arabs in neuro.png',
       techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
-      liveUrl: 'https://example.com',
-           githubUrl: 'https://github.com',
+      liveUrl: 'https://github.com/arabsinneuro/arabs-in-neuro/',
+           githubUrl: 'https://arabsinneuro.org/',
+    },
+    {
+      id: 10,
+      title: 'ariyan Art',
+      description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
+      image: 'ariyan Art.png',
+      techStack: ['React', 'Node.js', 'MongoDB', 'Google Maps API', 'Stripe'],
+      liveUrl: 'https://ariyanarts.ca/',
+          //  githubUrl: '',
     }
   ];
 

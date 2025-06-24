@@ -6,32 +6,32 @@ const ServicesSection = () => {
     {
       icon: Code,
       title: 'Custom WordPress Development',
-      description: 'Tailored WordPress solutions with custom themes, plugins, and advanced functionality.',
+      description: 'Tailored WordPress solutions with custom themes, plugins, and advanced functionality, optimized for performance and SEO.',
+    }, {
+      icon: Globe,
+      title: 'E-commerce & Marketplace Solutions',
+      description: 'Built full‑stack WooCommerce and Shopify platforms, including payment integration, product management, and transactional workflows for marketplaces.',
     },
     {
       icon: ShoppingCart,
       title: 'Shopify Customization',
       description: 'Complete Shopify store setup, theme customization, and app integration.',
     },
-    {
-      icon: Globe,
-      title: 'E-commerce & Marketplace Solutions',
-      description: 'Full-scale e-commerce platforms with payment gateways and inventory management.',
-    },
+   
     {
       icon: Palette,
       title: 'UI/UX Design',
-      description: 'User-centered design with modern aesthetics and seamless user experiences.',
+      description: 'User‑focused design systems, wireframing, and high‑fidelity mockups. Ensuring seamless digital experiences through iterative testing and feedback loops.',
     },
     {
       icon: Users,
       title: 'Business & Event Platforms',
-      description: 'Comprehensive business solutions with booking systems and management tools.',
+      description: 'Developed booking, venue management, and CRM tools tailored to businesses and event organizers, streamlining workflows and increasing operational efficiency.',
     },
     {
       icon: Smartphone,
       title: 'Responsive Web Apps',
-      description: 'Mobile-first applications built with React and modern web technologies.',
+      description: 'Crafted mobile‑first applications using React, REST APIs, and modern frontend stacks—delivering responsive, high-performance web experiences across devices.',
     },
   ];
 
