@@ -79,7 +79,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (647) 647-5375',
+      value: '+1 (647) 278-5375',
       href: 'tel:+16472785375',
     },
     {

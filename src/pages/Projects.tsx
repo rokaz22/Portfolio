@@ -11,28 +11,27 @@ const Portfolio = () => {
       title: 'GLOBALLINK TRADE HUB',
       description: 'event booking, payment integration, and design services with integrated CRM and analytics.',
      image: 'Globallink.png',
-
-      techStack: ['WordPress', 'Event Calendar', 'Booking System', 'CRM Integration'],
+      techStack: ['WordPress', 'Event Calendar', 'Booking System','CSS', 'CRM Integration','Stripe'],
       liveUrl: 'https://globallinktradehub.com/',
       // githubUrl: 'https://github.com',
-      category: 'E-commerce'
+      category: 'Business Platform'
     },
     {
       id: 2,
       title: 'TATROMA',
       description: 'Luxury furniture e-commerce platform featuring 3D product visualization, custom configurator, and premium user experience.',
       image: 'tatroma.png',
-      techStack: ['Shopify', 'Liquid', 'JavaScript', 'CSS3', 'ThreeJS'],
+      techStack: ['Shopify', 'Liquid', 'JavaScript', 'CSS','Stripe'],
       liveUrl: 'https://tatroma.ca/',
            // githubUrl: 'https://github.com',
 
-      category: 'Woocommerce'
+      category: 'Ecommerce'
     },{
       id: 3,
       title: 'LUMEN LANDSCAPING',
       description: 'Clearly outline all their services. Each service could have its own dedicated page with descriptions, benefits, and relevant portfolio images.',
       image: 'lumen landescape.png',
-      techStack: ['WordPress', 'WooCommerce', 'Custom Plugins', 'PHP', 'MySQL'],
+      techStack: ['WordPress', 'WooCommerce', 'Custom Plugins', 'PHP', 'MySQL','Google Maps API'],
       liveUrl: 'https://lumenlandscaping.ca/',
             // githubUrl: 'https://github.com',
 
@@ -45,17 +44,17 @@ const Portfolio = () => {
       title: 'JAFCA',
       description: 'Multi-purpose business platform for development, amazon-style online marketplace with advanced vendor management, and payment integration.',
       image: 'jafca.png',
-      techStack: ['WordPress', 'Event Calendar', 'Booking System', 'CRM Integration'],
+      techStack: ['WordPress', 'Elementor','CSS', 'WooCommerce', 'Dokan','Stripe'],
       liveUrl: 'https://jafca.ca/',
             // githubUrl: 'https://github.com',
 
-      category: 'Business Platform'
+      category: 'Ecommerce'
     }, {
       id: 5,
       title: 'zmedCoach',
       description: 'Comprehensive Arabic learning platform with interactive lessons, progress tracking, and gamified learning experience.',
       image: 'zmedCoach.png',
-      techStack: ['WordPress', 'LearnDash', 'Custom Themes', 'Ajax', 'MySQL'],
+      techStack: ['WordPress', 'LearnDash', 'CSS','Custom Themes', 'Ajax', 'MySQL','LMS','WooCommerce','Google Maps API'],
       liveUrl: 'https://zmedcoach.com/',
         // githubUrl: 'https://github.com',
 
@@ -67,54 +66,57 @@ const Portfolio = () => {
       title: 'ESARCAR',
       description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
       image: 'esarCar.png',
-      techStack: ['React', 'Node.js',  'Google Maps API', 'Stripe'],
+      techStack: ['Wordpress','WooCommerce', 'Booking System', 'CSS', 'Google Maps API', 'Stripe'],
       liveUrl: 'https://esarcar.dotwebagency.net/',
            // githubUrl: 'https://github.com',
 
-      category: 'Web App'
+      category: 'Ecommerce'
     },
      {
       id: 7,
       title: 'GLOBE TRADE COSMETICS STORE',
-      description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
+      description: 'an online store selling various cosmetic and beauty products.',
       image: 'Globe trade.png',
-      techStack: ['React', 'Node.js', 'Google Maps API', 'Stripe'],
+      techStack: ['Wordpress', 'Custom theme', 'CSS','Google Maps API', 'Stripe'],
       liveUrl: 'https://glob-trade.com/',
            // githubUrl: 'https://github.com',
 
-      category: 'Web App'
+      category: 'Ecommerce'
     },{
       id: 8,
       title: 'NAS CREATIONS',
-      description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
+      description: 'a portfolio website designed to highlight Nastaran’s exceptional work as a designer.',
       image: 'nastaran.png',
-      techStack: ['React', 'Node.js', 'Google Maps API', 'Stripe'],
+      techStack: ['Wordpress', 'CSS', 'Custom theme'],
       liveUrl: 'https://nascreations.ca/',
            // githubUrl: 'https://github.com',
 
-      category: 'Web App'
+      category: 'Portfolio'
     },
     {
       id: 9,
       title: 'ARABS IN NEURO',
-      description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
+      description: 'Non-profit Organization: They explicitly state they are an incorporated not-for-profit organization in Canada.',
       image: 'arabs in neuro.png',
-      techStack: ['React', 'Node.js', 'Google Maps API', 'Stripe'],
+      techStack: ['React', 'next', 'Tailwind'],
       liveUrl: 'https://arabsinneuro.org/',
            githubUrl: 'https://github.com/arabsinneuro/arabs-in-neuro/',
+      category: 'E-learning'
+
     },
     {
       id: 10,
-      title: 'ariyan Art',
-      description: 'Saudi Arabia\'s leading peer-to-peer car rental platform with real-time geolocation, booking management, and payment processing.',
+      title: 'ARIYAN ARTS',
+      description: 'an online store specializing in handcrafted and elegant items.',
       image: 'ariyan Art.png',
-      techStack: ['React', 'Node.js', 'Google Maps API', 'Stripe'],
+      techStack: ['Shopify', 'Custom theme'],
       liveUrl: 'https://ariyanarts.ca/',
           //  githubUrl: '',
+           category: 'Ecommerce'
     }
   ];
 
-  const categories = ['All', 'Woocommerce', 'Portfolio', 'E-learning', 'Business Platform'];
+  const categories = ['All', 'Ecommerce', 'Portfolio', 'E-learning', 'Business Platform'];
 
   const filteredProjects = activeFilter === 'All' 
     ? projects 
