@@ -82,7 +82,7 @@ const Contact = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/rokaz22', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/mahmoud-shaheen-99179787/', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://www.instagram.com/reel/DLQHoAGCQWG/?utm_source=ig_web_copy_link', label: 'Instagram' },
+    { icon: Instagram, href: 'https://www.instagram.com/al.shahin20/', label: 'Instagram' },
   ];
 
   return (
