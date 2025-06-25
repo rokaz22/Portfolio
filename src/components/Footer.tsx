@@ -6,7 +6,7 @@ const Footer = () => {
     { icon: Github, href: 'https://github.com/rokaz22', label: 'GitHub', color: 'hover:text-white' },
     { icon: Instagram, href: 'https://www.instagram.com/al.shahin20/', label: 'GitHub', color: 'hover:text-white' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/mahmoud-shaheen-99179787/', label: 'LinkedIn', color: 'hover:text-blue-400' },
-    { icon: Mail, href: 'mailto:m.shaheen@dotwebagency.net', label: 'Email', color: 'hover:text-[#64F4AB]' },
+    { icon: Mail, href: 'mailto:mahmoud.shahin314@gmail.com', label: 'Email', color: 'hover:text-[#64F4AB]' },
   ];
 
   const quickLinks = [
@@ -67,7 +67,7 @@ const Footer = () => {
                 href="mailto:mahmoud.shaheen@dotwebagency.net"
                 className="text-[#64F4AB] hover:text-[#FECD1A] transition-colors"
               >
-                m.shaheen@dotwebagency.net 
+                mahmoud.shaheen@dotwebagency.net
               </a>
             </div>
             <div className="pt-4">
