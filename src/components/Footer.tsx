@@ -64,7 +64,7 @@ const Footer = () => {
             <div className="space-y-2 text-gray-400">
               <p>Ready to start your next project?</p>
               <a
-                href="mailto:mahmoud.shaheen@dotwebagency.net"
+                href="mailto:mahmoud.shahin314@gmail.com"
                 className="text-[#64F4AB] hover:text-[#FECD1A] transition-colors"
               >
                 mahmoud.shaheen@dotwebagency.net

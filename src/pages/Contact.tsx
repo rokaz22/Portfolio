@@ -62,8 +62,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'mahmoud@dotfolio.dev',
-      href: 'mailto:mahmoud@dotfolio.dev',
+      value: 'mahmoud.shaheen@dotwebagency.net',
+      href: 'mailto:mahmoud.shahin314@gmail.com',
     },
     {
       icon: Phone,
