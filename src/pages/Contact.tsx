@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -19,14 +19,15 @@ const Contact = () => {
     });
   };
 
-  const encode = (data: { [key: string]: string }) => {
+  const encode = (data: { [key: string]: string; }) => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(); // This is the most important line - it stops the redirect
+    // This is the most important part: it stops the page from redirecting.
+    e.preventDefault();
     setIsSubmitting(true);
 
     fetch("/", {
@@ -67,25 +68,25 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+1 (647) 278-5375',
+      href: 'tel:+16472785375',
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'Available Worldwide',
+      value: 'Markham, ON',
       href: '#',
     },
   ];
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: Github, href: 'https://github.com/rokaz22', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/mahmoud-shaheen-99179787/', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://www.instagram.com/reel/DLQHoAGCQWG/?utm_source=ig_web_copy_link', label: 'Instagram' },
   ];
 
   return (
-    <div className="min-h-screen pt-20 pb-12 px-6 bg-gradient-to-br from-[#2D2E32] via-[#25262A] to-[#D2E32]">
+    <div className="min-h-screen pt-20 pb-12 px-6 bg-gradient-to-br from-[#2D2E32] via-[#25262A] to-[#2D2E32]">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
@@ -102,7 +103,7 @@ const Contact = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">Send a Message</h2>
-              {/* --- The ACTION attribute has been removed from this form --- */}
+              {/* This form is now set up correctly for a React app */}
               <form
                 name="contact"
                 method="POST"
@@ -197,7 +198,47 @@ const Contact = () => {
               </form>
             </div>
           </div>
-          {/* ...The rest of your component remains the same... */}
+
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
+              <div className="space-y-6">
+                {contactInfo.map((info, index) => (
+                  <a
+                    key={index}
+                    href={info.href}
+                    className="flex items-center gap-4 p-4 bg-[#25262A] rounded-lg border border-[#64F4AB]/20 hover:border-[#64F4AB]/50 transition-all duration-300 hover:scale-105 group"
+                  >
+                    <div className="w-12 h-12 bg-[#64F4AB]/20 rounded-lg flex items-center justify-center group-hover:bg-[#64F4AB]/30 transition-colors">
+                      <info.icon className="w-6 h-6 text-[#64F4AB]" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-white group-hover:text-[#64F4AB] transition-colors">
+                        {info.title}
+                      </h3>
+                      <p className="text-gray-400">{info.value}</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-white mb-4">Follow Me</h3>
+              <div className="flex gap-4">
+                {socialLinks.map((social, index) => (
+                  <a target='_blank'
+                    key={index}
+                    href={social.href}
+                    className="w-12 h-12  bg-[#25262A] rounded-lg flex items-center justify-center border border-[#64F4AB]/20 hover:border-[#64F4AB] hover:bg-[#64F4AB]/10 transition-all duration-300 hover:scale-110 group"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-6 h-6 text-[#64F4AB] group-hover:text-white transition-colors" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
