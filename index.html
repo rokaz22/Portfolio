@@ -23,7 +23,46 @@
       <input type="email" name="email" />
       <input type="text" name="subject" />
       <textarea name="message"></textarea>
+      </form><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Mahmoud Shaheen | Web Developer Portfolio</title>
+<meta name="description" content="The personal portfolio of me, a passionate WordPress and React.js developer." />
+<meta name="author" content="Mahmoud Shaheen" />
+
+<meta property="og:title" content="Mahmoud Shaheen | Portfolio" />
+<meta property="og:description" content="The personal portfolio of me, a passionate WordPress and React.js developer." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/preview.png" /> 
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="/preview.png" />
+
+    <script>
+      (function() {
+        const redirect = sessionStorage.getItem('redirect');
+        sessionStorage.removeItem('redirect');
+        if (redirect && redirect !== location.pathname) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <form name="contact" netlify hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
       </form>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
