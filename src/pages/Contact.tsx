@@ -26,7 +26,6 @@ const Contact = () => {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    // This is the most important part: it stops the page from redirecting.
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -103,12 +102,11 @@ const Contact = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">Send a Message</h2>
-              {/* This form is now set up correctly for a React app */}
               <form
                 name="contact"
                 method="POST"
                 data-netlify="true"
-                 data-netlify-recaptcha="true"
+                data-netlify-recaptcha="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
                 className="space-y-6"
@@ -181,7 +179,6 @@ const Contact = () => {
                     Your Message
                   </label>
                 </div>
-<div data-netlify-recaptcha="true"></div>
 
                 <button
                   type="submit"
@@ -193,6 +190,8 @@ const Contact = () => {
                   ) : (
                     <>
                       <Send size={20} />
+                      <div data-netlify-recaptcha="true"></div>
+
                       Send Message
                     </>
                   )}
@@ -201,6 +200,7 @@ const Contact = () => {
             </div>
           </div>
 
+          {/* Contact Information */}
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
