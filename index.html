@@ -36,12 +36,17 @@
   <body>
     <div id="root"></div>
 
-    <form name="contact" data-netlify-recaptcha="true" netlify hidden>
+    <!-- 
+      This is the simplified hidden form that Netlify's bots will detect.
+      It includes the reCAPTCHA attribute.
+    -->
+    <form name="contact" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
       <input type="text" name="name" />
       <input type="email" name="email" />
       <input type="text" name="subject" />
       <textarea name="message"></textarea>
-      </form>
+    </form>
+    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
