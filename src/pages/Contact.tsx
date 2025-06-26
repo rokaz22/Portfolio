@@ -108,6 +108,7 @@ const Contact = () => {
                 name="contact"
                 method="POST"
                 data-netlify="true"
+                 data-netlify-recaptcha="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
                 className="space-y-6"
@@ -180,6 +181,7 @@ const Contact = () => {
                     Your Message
                   </label>
                 </div>
+<div data-netlify-recaptcha="true"></div>
 
                 <button
                   type="submit"
