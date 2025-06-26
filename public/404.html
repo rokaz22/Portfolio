@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <script type="text/javascript">
+      // Get the full path from the URL
+      var path = window.location.pathname;
+
+      // Redirect to the index.html page, passing the path as a query parameter.
+      // The l parameter is a marker for the script in index.html to know it's a redirect.
+      window.location.href = '/?l=' + path;
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

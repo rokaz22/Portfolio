@@ -90,7 +90,7 @@ const About = () => {
             <div className="relative">
               <div className="glass-effect rounded-2xl p-8">
                 <img
-                  src="../../public/images/Profile Photo3.png"
+                  src="images/Profile Photo3.png"
                   alt="Mahmoud Shaheen"
                   className="w-full rounded-xl object-cover"
                 />

@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           
           <Link to="/" className="text-2xl font-bold text-[#64F4AB] hover:text-[#FECD1A] transition-colors">
-            <img width="30%" src="../../public/images/logo.png" alt="logo"/>
+            <img width="30%" src="images/logo.png" alt="logo"/>
           </Link>
 
           {/* Desktop Menu */}

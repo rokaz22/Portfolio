@@ -15,10 +15,28 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="/preview.png" />
 
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search) {
+          var q = {};
+          l.search.slice(1).split('&').forEach(function(v) {
+            var a = v.split('=');
+            q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+          });
+          if (q.l) {
+            window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + q.l.replace(/%2F/g, '/') + l.hash
+            );
+          }
+        }
+      }(window.location))
+    </script>
+  </head>
+
   <body>
     <div id="root"></div>
 
-    <form name="contact" netlify hidden>
+    <form name="contact" data-netlify-recaptcha="true" netlify hidden>
       <input type="text" name="name" />
       <input type="email" name="email" />
       <input type="text" name="subject" />

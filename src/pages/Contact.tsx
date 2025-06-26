@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -19,62 +19,51 @@ const Contact = () => {
     });
   };
 
-  // Helper function to encode data for x-www-form-urlencoded
-  const encode = (data: { [key: string]: string }) => {
+  const encode = (data: { [key: string]: string; }) => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
+    // This is the most important part: it stops the page from redirecting.
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
-      const response = await fetch("/", { // Submit to the current page path, Netlify will intercept
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        // IMPORTANT: "form-name" must match the 'name' attribute of your Netlify form
-        // (which is "contact" in the hidden HTML form and will be added below)
-        body: encode({ "form-name": "contact", ...formData }),
-      });
-
-      if (response.ok) {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "contact",
+        ...formData,
+      }),
+    })
+      .then(() => {
         toast({
           title: "Message Sent!",
           description: "Thank you for reaching out. I'll get back to you soon!",
         });
         setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        // You might want to log the response for debugging if it's not OK
-        console.error("Form submission failed:", response.status, response.statusText);
-        // Attempt to read error message if Netlify sends one (though it's rare for basic failures)
-        const errorText = await response.text();
-        console.error("Netlify response text:", errorText);
+      })
+      .catch((error) => {
         toast({
           title: "Submission Failed!",
           description: "There was an error sending your message. Please try again later.",
-          variant: "destructive" // Assuming you have a destructive variant for your toast
+          variant: "destructive",
         });
-      }
-    } catch (error) {
-      console.error("Network or submission error:", error);
-      toast({
-        title: "Network Error!",
-        description: "Could not connect to the server. Please check your internet connection.",
-        variant: "destructive"
+        console.error("Form submission error:", error);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
-    } finally {
-      setIsSubmitting(false);
-    }
   };
 
   const contactInfo = [
     {
       icon: Mail,
       title: 'Email',
-      value: 'mahmoud@dotfolio.dev',
-      href: 'mailto:mahmoud@dotfolio.dev',
+      value: 'mahmoud.shaheen@dotwebagency.net',
+      href: 'mailto:mahmoud.shahin314@gmail.com',
     },
     {
       icon: Phone,
@@ -93,7 +82,7 @@ const Contact = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/rokaz22', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/mahmoud-shaheen-99179787/', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://www.instagram.com/reel/DLQHoAGCQWG/?utm_source=ig_web_copy_link', label: 'Instagram' },
+    { icon: Instagram, href: 'https://www.instagram.com/al.shahin20/', label: 'Instagram' },
   ];
 
   return (
@@ -114,16 +103,22 @@ const Contact = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">Send a Message</h2>
+              {/* This form is now set up correctly for a React app */}
               <form
-                name="contact" // Add this name attribute
-                method="POST" // Crucial for Netlify to recognize it as a form for submission
-                data-netlify="true" // Preferred for dynamic forms
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                 data-netlify-recaptcha="true"
+                data-netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
                 className="space-y-6"
               >
-                {/* Optional: Netlify Honeypot for spam prevention (add to public/index.html too) */}
-                {/* <input type="hidden" name="bot-field" /> */}
-                <input type="hidden" name="form-name" value="contact" /> {/* Ensure this is here */}
+                <input type="hidden" name="form-name" value="contact" />
+                <p hidden>
+                    <label>
+                        Don’t fill this out if you’re human: <input name="bot-field" />
+                    </label>
+                </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="relative">
@@ -186,6 +181,7 @@ const Contact = () => {
                     Your Message
                   </label>
                 </div>
+<div data-netlify-recaptcha="true"></div>
 
                 <button
                   type="submit"
@@ -205,7 +201,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Information (rest of your component) */}
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
