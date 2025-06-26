@@ -179,7 +179,7 @@ const Contact = () => {
                     Your Message
                   </label>
                 </div>
-
+<div data-netlify-recaptcha="true" className="my-4" />
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -190,7 +190,6 @@ const Contact = () => {
                   ) : (
                     <>
                       <Send size={20} />
-                      <div data-netlify-recaptcha="true"></div>
 
                       Send Message
                     </>
